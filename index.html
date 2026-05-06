@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devon Days Out — A Living Pass for South Devon</title>
+  <meta name="description" content="A digital member pass for Visit South Devon. Carry 150+ local offers in your wallet — with location-aware updates, live deal counters, and a digital-to-physical bridge." />
+  <meta name="theme-color" content="#00797f" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Devon Days Out — A Living Pass for South Devon" />
+  <meta property="og:description" content="Built on PassQR. A high-end member pass for Visit South Devon, with live deal counters and geofenced lock-screen alerts." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts: Fraunces (display serif), Manrope (body), JetBrains Mono (technical) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2300797f'/%3E%3Ctext x='50' y='66' font-family='serif' font-size='56' font-weight='700' text-anchor='middle' fill='%23f4ede0'%3ED%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- Grain overlay for editorial depth -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ─────────── NAV ─────────── -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="#">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="22" height="22"><circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 19 Q9 14 16 19 T29 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M3 23 Q9 18 16 23 T29 23" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".55"/></svg>
+        </span>
+        <span class="brand__name">Devon Days Out</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#try">Try the pass</a>
+        <a href="#anatomy">Anatomy</a>
+        <a href="#superpowers">Capabilities</a>
+        <a href="#push">Push &amp; Proximity</a>
+      </nav>
+      <span class="nav__demo">Live demo · v1.0</span>
+    </div>
+  </header>
+
+  <!-- ─────────── HERO ─────────── -->
+  <section class="hero">
+    <!-- Decorative coast SVG horizon -->
+    <svg class="hero__horizon" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="sun" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#f0c070"/><stop offset="100%" stop-color="#e8825c"/></linearGradient>
+      </defs>
+      <circle cx="1100" cy="120" r="58" fill="url(#sun)" opacity=".9"/>
+      <path d="M0 160 Q220 130 440 158 T880 158 T1320 152 T1440 156 V220 H0 Z" fill="#00797f" opacity=".18"/>
+      <path d="M0 178 Q220 155 440 178 T880 178 T1320 172 T1440 178 V220 H0 Z" fill="#00797f" opacity=".28"/>
+      <path d="M0 196 Q220 178 440 196 T880 196 T1320 192 T1440 196 V220 H0 Z" fill="#004d50" opacity=".4"/>
+    </svg>
+
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <p class="kicker">A pitch-ready demo for <span>Visit South Devon</span></p>
+        <h1 class="display">
+          Devon,<br />
+          <em>in your</em><br />
+          <span class="display__hl">wallet.</span>
+        </h1>
+        <p class="lede">
+          A high-end membership pass for the Devon Days Out scheme. One hundred and fifty offers, every coastal town from Sidmouth to Salcombe, all living quietly in Apple Wallet and Google&nbsp;Wallet — and waking up the moment a member sets foot on the harbourside.
+        </p>
+        <div class="hero__ctas">
+          <a class="btn btn--primary" href="#try">See the live pass <span aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost" href="#superpowers">What makes it different</a>
+        </div>
+        <ul class="hero__meta" aria-label="Project facts">
+          <li><strong>1</strong><span>mock holder<br/>Lucy Pengelly</span></li>
+          <li><strong>10</strong><span>deals available<br/>in this pass</span></li>
+          <li><strong>2</strong><span>wallet platforms<br/>Apple &amp; Google</span></li>
+        </ul>
+      </div>
+
+      <!-- ─────────── PASS MOCKUP ─────────── -->
+      <aside class="hero__pass" aria-label="Devon Days Out member pass mockup">
+        <div class="pass" role="img" aria-label="Apple Wallet pass for Lucy Pengelly, Resident Explorer tier">
+          <!-- Strip image: stylised Dartmouth Harbor -->
+          <div class="pass__strip">
+            <svg viewBox="0 0 600 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs>
+                <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#f8d49a"/>
+                  <stop offset="55%" stop-color="#e8a878"/>
+                  <stop offset="100%" stop-color="#9a4f5a"/>
+                </linearGradient>
+                <linearGradient id="water" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#1a4045"/>
+                  <stop offset="100%" stop-color="#062b30"/>
+                </linearGradient>
+              </defs>
+              <rect width="600" height="200" fill="url(#sky)"/>
+              <circle cx="430" cy="92" r="32" fill="#fde9c7" opacity=".95"/>
+              <!-- Distant headland -->
+              <path d="M0 130 Q120 110 230 122 T420 118 T600 124 V200 H0 Z" fill="#3a2230" opacity=".55"/>
+              <path d="M0 148 Q140 132 280 144 T520 140 T600 146 V200 H0 Z" fill="#1f1820" opacity=".75"/>
+              <!-- Water -->
+              <rect y="148" width="600" height="52" fill="url(#water)"/>
+              <!-- Boat silhouettes -->
+              <g fill="#0d1416">
+                <path d="M170 152 l8 -22 l3 22 z"/>
+                <path d="M155 156 q12 -8 38 0 z"/>
+                <path d="M260 154 l5 -14 l2 14 z"/>
+                <path d="M250 158 q9 -6 26 0 z"/>
+                <path d="M380 153 l10 -28 l4 28 z"/>
+                <path d="M362 158 q14 -10 44 0 z"/>
+              </g>
+              <!-- Reflections -->
+              <g stroke="#fde9c7" stroke-width="1" opacity=".25">
+                <line x1="180" y1="162" x2="180" y2="180"/>
+                <line x1="265" y1="162" x2="265" y2="174"/>
+                <line x1="392" y1="162" x2="392" y2="184"/>
+              </g>
+            </svg>
+            <div class="pass__strip-label">Dartmouth Harbour · golden hour</div>
+          </div>
+
+          <header class="pass__head">
+            <div class="pass__logo">
+              <svg viewBox="0 0 28 28" width="22" height="22" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 17 Q8 13 14 17 T25 17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <span>VISIT<br/>SOUTH DEVON</span>
+            </div>
+            <div class="pass__tier">
+              <span class="pass__field-label">Member tier</span>
+              <span class="pass__field-value">Resident Explorer</span>
+            </div>
+          </header>
+
+          <div class="pass__primary">
+            <span class="pass__field-label">Member</span>
+            <span class="pass__name">Lucy Pengelly</span>
+            <span class="pass__sub">Totnes · joined Jan&nbsp;2026</span>
+          </div>
+
+          <div class="pass__aux">
+            <div>
+              <span class="pass__field-label">Pass ID</span>
+              <span class="pass__field-value mono">DDO-2026-04417</span>
+            </div>
+            <div>
+              <span class="pass__field-label">Deals redeemed</span>
+              <span class="pass__field-value">4 / 10</span>
+              <div class="pass__bar"><span style="width:40%"></span></div>
+            </div>
+          </div>
+
+          <div class="pass__qr-wrap">
+            <img class="pass__qr" alt="QR code linking to passqr.com landing page"
+              src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=0&data=https%3A%2F%2Fwww.passqr.com%2Fp%2FPASS-JMBGA2HH" />
+            <span class="pass__qr-caption mono">PASS-JMBGA2HH</span>
+          </div>
+
+          <footer class="pass__foot">
+            <span>Tap to flip · scan at any partner venue</span>
+          </footer>
+        </div>
+
+        <p class="hero__pass-note">
+          ↑ A working mock pass for <strong>Lucy Pengelly</strong>. The QR resolves to the real PassQR landing page.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ─────────── TRY IT ─────────── -->
+  <section class="try" id="try">
+    <div class="container">
+      <div class="try__head">
+        <span class="eyebrow">01 · The live demo</span>
+        <h2 class="display display--md">Add it to your wallet — right now.</h2>
+        <p class="lede lede--narrow">
+          The buttons below open the same demo pass on a real device. iPhone users land in Apple Wallet; Android users land in Google Wallet. The public landing page works on any browser.
+        </p>
+      </div>
+
+      <div class="try__grid">
+        <a class="walletbtn walletbtn--apple" href="https://www.passqr.com/api/wallet/apple?code=PASS-JMBGA2HH" target="_blank" rel="noopener">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+          <span class="walletbtn__lbl">
+            <small>Add to</small>
+            <strong>Apple Wallet</strong>
+          </span>
+        </a>
+
+        <a class="walletbtn walletbtn--google" href="https://www.passqr.com/api/wallet/google?code=PASS-JMBGA2HH" target="_blank" rel="noopener">
+          <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.99.66-2.25 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          <span class="walletbtn__lbl">
+            <small>Save to</small>
+            <strong>Google Wallet</strong>
+          </span>
+        </a>
+
+        <a class="walletbtn walletbtn--web" href="https://www.passqr.com/p/PASS-JMBGA2HH" target="_blank" rel="noopener">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span class="walletbtn__lbl">
+            <small>Open the</small>
+            <strong>Public page</strong>
+          </span>
+        </a>
+      </div>
+
+      <p class="try__code">
+        Pass code: <code>PASS-JMBGA2HH</code> · Holder <code>Lucy Pengelly</code> · Tier <code>Resident Explorer</code>
+      </p>
+    </div>
+  </section>
+
+  <!-- ─────────── ANATOMY ─────────── -->
+  <section class="anatomy" id="anatomy">
+    <div class="container">
+      <span class="eyebrow">02 · Anatomy of the pass</span>
+      <h2 class="display display--md">Front matters. Back delivers.</h2>
+      <p class="lede lede--narrow">
+        The front is what a member sees in the lock-screen flash. The back is where the scheme proves it's a living, breathing programme — not a printed loyalty card with a QR slapped on.
+      </p>
+
+      <div class="anatomy__grid">
+        <article class="anatomy__card">
+          <header>
+            <h3>Front of pass</h3>
+            <span class="mono">visible at a glance</span>
+          </header>
+          <ol class="callouts">
+            <li><b>Strip image</b> — Dartmouth, Salcombe, or a Dartmoor tor. Refreshed seasonally to keep the pass feeling alive.</li>
+            <li><b>Visit South Devon logo</b> — top-left, where members already look for brand identity in Apple Wallet.</li>
+            <li><b>Member tier</b> — "Resident Explorer", "Gold Member", "Founding Friend". A clear ladder to climb.</li>
+            <li><b>Member name &amp; pass ID</b> — large for the human, small &amp; monospaced for the database.</li>
+            <li><b>Live deals counter</b> — <em>4 / 10 redeemed</em>, with a progress bar. This is the proof of life partner venues need to see.</li>
+            <li><b>QR code</b> — high-contrast, scannable from any merchant phone. Encodes the pass code, not personal data.</li>
+          </ol>
+        </article>
+
+        <article class="anatomy__card">
+          <header>
+            <h3>Back of pass</h3>
+            <span class="mono">the evolution layer</span>
+          </header>
+          <ol class="callouts">
+            <li><b>Integration link</b> — "View all 150+ current offers at devondaysout.co.uk/my-deals."</li>
+            <li><b>Seasonal spotlight</b> — "20% off at Brixham Fish Market · ends 31 May." Updated centrally; appears on every member's pass instantly.</li>
+            <li><b>Validation instructions</b> — for the merchant: "Scan code to verify membership and log redemption."</li>
+            <li><b>Privacy &amp; support</b> — partner contact, data policy link, revoke pass.</li>
+            <li><b>Audit metadata</b> — issued date, last updated, geofence regions enabled.</li>
+          </ol>
+          <div class="anatomy__spotlight">
+            <span class="eyebrow eyebrow--coral">Current spotlight</span>
+            <p>20% off at <strong>Brixham Fish Market</strong> — ends 31 May 2026.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── SUPERPOWERS ─────────── -->
+  <section class="powers" id="superpowers">
+    <div class="container">
+      <span class="eyebrow eyebrow--light">03 · The differentiation</span>
+      <h2 class="display display--md display--light">Three things a printed card cannot do.</h2>
+      <p class="lede lede--narrow lede--light">
+        These are the talking points to lead with in the Visit South Devon meeting. Each one separates the digital pass from a plastic loyalty card, a printed voucher, or a generic mobile app.
+      </p>
+
+      <div class="powers__grid">
+        <article class="power">
+          <div class="power__num">01</div>
+          <h3>Resident Proximity Trigger</h3>
+          <p>The pass auto-surfaces on the member's lock screen the moment they walk into a participating town — Totnes, Salcombe, Brixham, Dartmouth. Geofenced relevance, no app required.</p>
+          <div class="power__phone">
+            <div class="phone">
+              <div class="phone__notch"></div>
+              <div class="phone__time">14:32</div>
+              <div class="phone__date">Wednesday 6 May</div>
+              <div class="phone__notif phone__notif--wallet">
+                <div class="phone__notif-icon">D</div>
+                <div class="phone__notif-body">
+                  <div class="phone__notif-title">DEVON DAYS OUT · now</div>
+                  <div class="phone__notif-text">Welcome to Dartmouth! 3 partner venues nearby. Tap to view your deals.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="power__how"><b>How:</b> The pass carries up to 10 location coordinates; iOS evaluates them on-device. No server push needed.</p>
+        </article>
+
+        <article class="power">
+          <div class="power__num">02</div>
+          <h3>The Push Update</h3>
+          <p>Switch a "Spring Deal" to a "Summer Deal" on every member's phone, simultaneously, without anyone re-downloading. One API call from your dashboard updates the world.</p>
+          <div class="power__phone">
+            <div class="phone">
+              <div class="phone__notch"></div>
+              <div class="phone__time">09:14</div>
+              <div class="phone__date">Updated for the season</div>
+              <div class="phone__notif phone__notif--wallet">
+                <div class="phone__notif-icon">D</div>
+                <div class="phone__notif-body">
+                  <div class="phone__notif-title">WALLET · pass updated</div>
+                  <div class="phone__notif-text">New spotlight: 20% off at Brixham Fish Market — ends 31 May.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="power__how"><b>How:</b> Apple Push Notification service delivers a silent ping; iOS pulls the new pass JSON and shows the change on the lock screen.</p>
+        </article>
+
+        <article class="power">
+          <div class="power__num">03</div>
+          <h3>Digital–Physical Bridge</h3>
+          <p>The plastic card a member receives at signup is a hard copy of the digital record. Scan it at a café and the wallet pass updates its "Deals Remaining" counter on the way home.</p>
+          <div class="power__phone">
+            <div class="phone">
+              <div class="phone__notch"></div>
+              <div class="phone__time">12:47</div>
+              <div class="phone__date">Synced from The Cherub</div>
+              <div class="phone__notif phone__notif--wallet">
+                <div class="phone__notif-icon">D</div>
+                <div class="phone__notif-body">
+                  <div class="phone__notif-title">DEVON DAYS OUT · counter</div>
+                  <div class="phone__notif-text">Deal redeemed at The Cherub, Dartmouth. 5 / 10 deals remaining.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="power__how"><b>How:</b> Merchant scan posts to PassQR's API; the pass record updates and a push refresh fans out to the member's wallet.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── PUSH ─────────── -->
+  <section class="push" id="push">
+    <div class="container container--narrow">
+      <span class="eyebrow">04 · The honest answer</span>
+      <h2 class="display display--md">"Can I send a push that pops up on the lock screen?"</h2>
+      <p class="lede">
+        Yes — but it's worth knowing how Apple Wallet actually behaves, because it's not quite the same as a regular app push. There are <em>three</em> ways Devon Days Out earns lock-screen real estate, and all three are demonstrable.
+      </p>
+
+      <div class="push__cards">
+        <div class="push__card">
+          <h4>1. Geofenced relevance <span>— for "Welcome to Dartmouth"</span></h4>
+          <p>This is the cleanest answer to your example. The pass carries a list of locations and a <code>relevantText</code>. When the member's iPhone is near one of them, iOS surfaces the pass <em>on the lock screen</em>, with that text. <b>No server push required</b> — the device decides. Apple permits up to 10 locations per pass.</p>
+        </div>
+
+        <div class="push__card">
+          <h4>2. Server-pushed pass updates <span>— for "new offer added"</span></h4>
+          <p>Your dashboard updates a field (e.g., "Current Spotlight"). PassQR sends a silent APNs ping. iOS fetches the new JSON and shows a small banner: <em>"Pass updated · 20% off at Brixham Fish Market"</em>. The text comes from the field's <code>changeMessage</code> template. It is <strong>not</strong> arbitrary marketing copy — it is the actual change, framed as a notification.</p>
+        </div>
+
+        <div class="push__card">
+          <h4>3. Google Wallet messages <span>— more flexible on Android</span></h4>
+          <p>Google Wallet exposes a <code>messages</code> array on the pass. You can post a free-form title + body and it appears as a banner on Android devices. Closer to "real" push, but still attached to the pass — not a separate app channel.</p>
+        </div>
+      </div>
+
+      <div class="push__verdict">
+        <p><strong>So can you push "Welcome to Dartmouth! Here are your local deals" automatically?</strong></p>
+        <p>Yes — and the right mechanism is <b>geofencing</b>, not server push. It's better, because it fires the moment a member arrives in town without you having to know they did. For seasonal copy refreshes ("Spring → Summer deals"), use server push. The two work in concert.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── PITCH ─────────── -->
+  <section class="pitch">
+    <div class="container">
+      <div class="pitch__grid">
+        <div>
+          <span class="eyebrow">For the Visit South Devon meeting</span>
+          <h2 class="display display--sm">The one-line summary.</h2>
+        </div>
+        <div class="pitch__lines">
+          <p>"It's a high-end lifestyle accessory that lives in Apple Wallet, knows when a member walks into Salcombe, tracks every deal redeemed in real time for partner reporting, and updates seasonally without anyone re-downloading anything."</p>
+          <ul>
+            <li>Scales to 150+ partner offers without any app store gymnastics.</li>
+            <li>Tier system supports Resident Explorer, Gold, Founding Friend.</li>
+            <li>Real-time partner reporting via the PassQR dashboard.</li>
+            <li>Geofenced lock-screen surfacing in Totnes, Salcombe, Dartmouth, Brixham — out of the box.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── FOOTER ─────────── -->
+  <footer class="foot">
+    <div class="container foot__inner">
+      <div class="foot__col">
+        <span class="brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="20" height="20"><circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 19 Q9 14 16 19 T29 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </span>
+          <span class="brand__name">Devon Days Out</span>
+        </span>
+        <p>A pitch demo. Not affiliated with Visit South Devon CIC. Built on PassQR by <a href="https://dasecure.com" target="_blank" rel="noopener">dasecure.com</a>.</p>
+      </div>
+      <div class="foot__col">
+        <h5>Demo links</h5>
+        <ul>
+          <li><a href="https://www.passqr.com/api/wallet/apple?code=PASS-JMBGA2HH" target="_blank" rel="noopener">Apple Wallet</a></li>
+          <li><a href="https://www.passqr.com/api/wallet/google?code=PASS-JMBGA2HH" target="_blank" rel="noopener">Google Wallet</a></li>
+          <li><a href="https://www.passqr.com/p/PASS-JMBGA2HH" target="_blank" rel="noopener">Public landing</a></li>
+        </ul>
+      </div>
+      <div class="foot__col">
+        <h5>Built with</h5>
+        <ul>
+          <li><a href="https://passqr.com" target="_blank" rel="noopener">PassQR</a> — pass infrastructure</li>
+          <li>Apple Wallet (PassKit)</li>
+          <li>Google Wallet API</li>
+          <li>Hosted on GitHub Pages</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__sig">© 2026 dasecure.com · Devon Days Out demo · Coded with care for South Devon.</div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
