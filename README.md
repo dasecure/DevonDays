@@ -26,6 +26,8 @@ DevonDays/
 ├── assets/
 │   ├── style.css       # Editorial coastal stylesheet
 │   └── main.js         # Scroll reveal, pass tilt, deal-counter demo
+├── geofences.json      # 8-location geofence config (machine-readable)
+├── TEMPLATE.md         # PassQR template authoring spec
 ├── README.md
 ├── LICENSE
 └── .nojekyll           # Tells GitHub Pages to skip Jekyll
@@ -51,8 +53,8 @@ The wallet buttons in `index.html` reference the demo pass code `PASS-JMBGA2HH`.
 
 This repo is a demo. For a polished pitch, the following items should be addressed:
 
-- [ ] **Custom PassQR template** — Author a "Devon Days Out" template with the brand teal `#00797f`, the Visit South Devon logo, and a Dartmouth Harbour strip image. The current demo pass uses an existing membership template as backbone; the wallet pass that gets installed will inherit that template's branding, not the on-site mockup styling.
-- [ ] **Geofence locations** — Add Totnes, Salcombe, Dartmouth, Brixham, Sidmouth, Exmouth coordinates to the pass's `locations` array, with `relevantText: "Welcome to {town}! Tap for your local deals."`
+- [ ] **Custom PassQR template** — Author the `Devon Days Out — Resident Explorer` template per [`TEMPLATE.md`](./TEMPLATE.md). The current demo pass uses the existing `MCP Gym` template as backbone; the wallet pass that gets installed will inherit that template's branding, not the on-site mockup styling.
+- [x] **Geofence locations** — 8 pins (6 town centres + 2 named partner venues) wired into pass `PASS-JMBGA2HH`. Config exported to [`geofences.json`](./geofences.json). One backend touch-up still needed: confirm PassQR's `pass.json` renderer passes `pass.data.locations` through to the top-level `locations` key.
 - [ ] **Domain** — Point `devondaysout.co.uk` at the GitHub Pages site or a Cloudflare Pages deployment.
 - [ ] **Imagery** — Replace the SVG strip-image placeholder with licensed photography of Dartmouth Harbour, Salcombe Estuary, or a Dartmoor tor.
 - [ ] **Copy approval** — Have Visit South Devon CIC approve the partner spotlight, tone, and tier names.
