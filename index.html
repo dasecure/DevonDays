@@ -39,6 +39,7 @@
         <a href="#anatomy">Anatomy</a>
         <a href="#superpowers">Capabilities</a>
         <a href="#push">Push &amp; Proximity</a>
+        <a href="#geofences">Geofences</a>
       </nav>
       <span class="nav__demo">Live demo · v1.0</span>
     </div>
@@ -270,8 +271,8 @@
       <div class="powers__grid">
         <article class="power">
           <div class="power__num">01</div>
-          <h3>Resident Proximity Trigger</h3>
-          <p>The pass auto-surfaces on the member's lock screen the moment they walk into a participating town — Totnes, Salcombe, Brixham, Dartmouth. Geofenced relevance, no app required.</p>
+          <h3>Resident Proximity Trigger <span class="power__badge">Live ✓</span></h3>
+          <p>The pass auto-surfaces on the member's lock screen the moment they walk into a participating town — Totnes, Salcombe, Brixham, Dartmouth. Geofenced relevance, no app required. <a href="#geofences" class="power__inlinelink">See the 8 pins ↓</a></p>
           <div class="power__phone">
             <div class="phone">
               <div class="phone__notch"></div>
@@ -364,6 +365,163 @@
         <p><strong>So can you push "Welcome to Dartmouth! Here are your local deals" automatically?</strong></p>
         <p>Yes — and the right mechanism is <b>geofencing</b>, not server push. It's better, because it fires the moment a member arrives in town without you having to know they did. For seasonal copy refreshes ("Spring → Summer deals"), use server push. The two work in concert.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ─────────── GEOFENCES ─────────── -->
+  <section class="geofences" id="geofences">
+    <div class="container">
+      <div class="geofences__head">
+        <span class="eyebrow">05 · Geofences live</span>
+        <h2 class="display display--md">Eight pins. Six towns. Two named venues.</h2>
+        <p class="lede lede--narrow">
+          The demo pass now carries the actual coordinates. When Lucy's iPhone enters any of these areas, iOS will surface the pass on her lock screen with the matching welcome text — automatically, no app, no server push, no permissions beyond the standard wallet install.
+        </p>
+
+        <div class="geofences__status" role="status">
+          <span class="geofences__status-dot" aria-hidden="true"></span>
+          <span class="geofences__status-text">
+            <strong>Wired in.</strong> Pass <code>PASS-JMBGA2HH</code> · 8&nbsp;of&nbsp;10 location slots used · last updated 7&nbsp;May&nbsp;2026
+          </span>
+        </div>
+      </div>
+
+      <!-- South Devon stylised map with 8 pins -->
+      <figure class="geofences__map">
+        <svg viewBox="0 0 700 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="map-title map-desc">
+          <title id="map-title">Devon Days Out geofence map</title>
+          <desc id="map-desc">Stylised map showing the 8 geofence locations across South Devon: Totnes, Dartmouth, Salcombe, Brixham, Sidmouth, Exmouth, Brixham Fish Market, and The Cherub at Dartmouth.</desc>
+
+          <!-- Background: bone-warm with subtle teal tint -->
+          <rect width="700" height="460" fill="#faf6ec"/>
+
+          <!-- Dotted grid (latitude/longitude graticule) -->
+          <g stroke="#00797f" stroke-opacity="0.10" stroke-width="1" stroke-dasharray="2 6">
+            <line x1="0" y1="100" x2="700" y2="100"/>
+            <line x1="0" y1="200" x2="700" y2="200"/>
+            <line x1="0" y1="300" x2="700" y2="300"/>
+            <line x1="0" y1="400" x2="700" y2="400"/>
+            <line x1="140" y1="0" x2="140" y2="460"/>
+            <line x1="280" y1="0" x2="280" y2="460"/>
+            <line x1="420" y1="0" x2="420" y2="460"/>
+            <line x1="560" y1="0" x2="560" y2="460"/>
+          </g>
+
+          <!-- Sea (south of the coast curve) -->
+          <path d="M 0 200 Q 110 230 200 285 T 360 320 T 530 200 T 700 130 L 700 460 L 0 460 Z"
+                fill="#00797f" fill-opacity="0.06"/>
+
+          <!-- Stylised coastline of South Devon, west-to-east -->
+          <path d="M 60 410 Q 90 380 110 375 Q 150 370 180 350 Q 220 330 270 320 Q 310 310 340 290 Q 380 275 410 270 Q 440 250 470 200 Q 510 150 560 130 Q 610 100 660 70"
+                fill="none" stroke="#004d50" stroke-width="2" stroke-linecap="round" stroke-opacity="0.55"/>
+
+          <!-- Compass rose -->
+          <g transform="translate(640, 380)" stroke="#00797f" stroke-width="1" fill="none" opacity="0.6">
+            <circle r="22"/>
+            <path d="M 0 -22 L 4 0 L 0 22 L -4 0 Z" fill="#00797f" fill-opacity="0.4"/>
+            <text x="0" y="-28" font-family="serif" font-size="11" fill="#004d50" text-anchor="middle">N</text>
+          </g>
+
+          <!-- Sea label -->
+          <text x="540" y="380" font-family="serif" font-style="italic" font-size="14" fill="#00797f" fill-opacity="0.45" letter-spacing="2">English Channel</text>
+
+          <!-- Pins -->
+          <!-- Town centres (filled teal) -->
+          <g class="map-pin" data-pin="totnes">
+            <circle cx="184.5" cy="247.9" r="14" fill="#00797f" fill-opacity="0.18"/>
+            <circle cx="184.5" cy="247.9" r="6" fill="#00797f"/>
+            <text x="184.5" y="232" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0d2528" text-anchor="middle">Totnes</text>
+          </g>
+          <g class="map-pin" data-pin="dartmouth">
+            <circle cx="282.7" cy="300.8" r="14" fill="#00797f" fill-opacity="0.18"/>
+            <circle cx="282.7" cy="300.8" r="6" fill="#00797f"/>
+            <text x="282.7" y="285" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0d2528" text-anchor="middle">Dartmouth</text>
+          </g>
+          <g class="map-pin" data-pin="salcombe">
+            <circle cx="108.1" cy="375.2" r="14" fill="#00797f" fill-opacity="0.18"/>
+            <circle cx="108.1" cy="375.2" r="6" fill="#00797f"/>
+            <text x="108.1" y="395" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0d2528" text-anchor="middle">Salcombe</text>
+          </g>
+          <g class="map-pin" data-pin="brixham">
+            <circle cx="341.8" cy="272.3" r="14" fill="#00797f" fill-opacity="0.18"/>
+            <circle cx="341.8" cy="272.3" r="6" fill="#00797f"/>
+            <text x="341.8" y="256" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0d2528" text-anchor="middle">Brixham</text>
+          </g>
+          <g class="map-pin" data-pin="sidmouth">
+            <circle cx="591.9" cy="84.8" r="14" fill="#00797f" fill-opacity="0.18"/>
+            <circle cx="591.9" cy="84.8" r="6" fill="#00797f"/>
+            <text x="591.9" y="68" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0d2528" text-anchor="middle">Sidmouth</text>
+          </g>
+          <g class="map-pin" data-pin="exmouth">
+            <circle cx="432.7" cy="124.2" r="14" fill="#00797f" fill-opacity="0.18"/>
+            <circle cx="432.7" cy="124.2" r="6" fill="#00797f"/>
+            <text x="432.7" y="108" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0d2528" text-anchor="middle">Exmouth</text>
+          </g>
+
+          <!-- Partner venues (coral diamonds, slightly offset from town pins) -->
+          <g class="map-pin map-pin--venue" data-pin="brixham-fish-market">
+            <rect x="357" y="282" width="10" height="10" fill="#e8825c" transform="rotate(45 362 287)"/>
+            <text x="370" y="291" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500" fill="#9a4f1c">Fish Market</text>
+          </g>
+          <g class="map-pin map-pin--venue" data-pin="the-cherub">
+            <rect x="298" y="310" width="10" height="10" fill="#e8825c" transform="rotate(45 303 315)"/>
+            <text x="311" y="319" font-family="ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500" fill="#9a4f1c">The Cherub</text>
+          </g>
+
+          <!-- Legend -->
+          <g transform="translate(40, 30)">
+            <circle cx="6" cy="6" r="5" fill="#00797f"/>
+            <text x="18" y="10" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#2a4347">Town centre geofence</text>
+            <rect x="143" y="2" width="8" height="8" fill="#e8825c" transform="rotate(45 147 6)"/>
+            <text x="160" y="10" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#2a4347">Partner venue</text>
+          </g>
+        </svg>
+        <figcaption>South Devon · 8 active geofences (6 town centres + 2 named partner venues)</figcaption>
+      </figure>
+
+      <!-- Verbose list of all 8 locations -->
+      <ol class="geofences__list">
+        <li>
+          <header><span class="geofences__pin">●</span> <strong>Totnes</strong> <span class="mono">50.4322, −3.6872</span></header>
+          <p>"Welcome to Totnes! Tap to view your local deals."</p>
+        </li>
+        <li>
+          <header><span class="geofences__pin">●</span> <strong>Dartmouth</strong> <span class="mono">50.3522, −3.5794</span></header>
+          <p>"Welcome to Dartmouth! Your harbour is calling."</p>
+        </li>
+        <li>
+          <header><span class="geofences__pin">●</span> <strong>Salcombe</strong> <span class="mono">50.2398, −3.7711</span></header>
+          <p>"Hello Salcombe! 4 partner venues nearby."</p>
+        </li>
+        <li>
+          <header><span class="geofences__pin">●</span> <strong>Brixham</strong> <span class="mono">50.3952, −3.5145</span></header>
+          <p>"Welcome to Brixham! 20% off at the Fish Market today."</p>
+        </li>
+        <li>
+          <header><span class="geofences__pin">●</span> <strong>Sidmouth</strong> <span class="mono">50.6786, −3.2399</span></header>
+          <p>"Welcome to Sidmouth! Tap for cream tea offers."</p>
+        </li>
+        <li>
+          <header><span class="geofences__pin">●</span> <strong>Exmouth</strong> <span class="mono">50.6191, −3.4147</span></header>
+          <p>"Welcome to Exmouth! Tap to view your local deals."</p>
+        </li>
+        <li class="geofences__venue">
+          <header><span class="geofences__pin geofences__pin--venue">◆</span> <strong>Brixham Fish Market</strong> <span class="mono">50.3950, −3.5083</span></header>
+          <p>"You're at Brixham Fish Market. 20% off ends 31 May."</p>
+        </li>
+        <li class="geofences__venue">
+          <header><span class="geofences__pin geofences__pin--venue">◆</span> <strong>The Cherub, Dartmouth</strong> <span class="mono">50.3525, −3.5784</span></header>
+          <p>"You're at The Cherub, Dartmouth. Show pass for 10% off."</p>
+        </li>
+      </ol>
+
+      <p class="geofences__note">
+        <strong>Two slots left.</strong> Apple Wallet permits up to 10 locations per pass. The remaining capacity is reserved for two new partner venues — Visit South Devon's choice. Each tier (Resident Explorer / Gold / Founding Friend) can also carry a different set, swapped via push without re-issue.
+      </p>
+
+      <p class="geofences__source">
+        Machine-readable config: <a href="geofences.json" target="_blank" rel="noopener"><code>geofences.json</code></a> · Template authoring guide: <a href="TEMPLATE.md" target="_blank" rel="noopener"><code>TEMPLATE.md</code></a>
+      </p>
     </div>
   </section>
 
