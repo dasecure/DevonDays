@@ -1,0 +1,81 @@
+{
+  "$schema": "https://passqr.com/schemas/geofences-v1.json",
+  "name": "Devon Days Out — Geofence Configuration",
+  "version": "1.0",
+  "description": "Pass-attached locations for Apple Wallet / Google Wallet. When a member's device enters one of these geofences, iOS surfaces the pass on the lock screen with the matching relevantText. Apple permits up to 10 entries per pass.",
+  "applies_to_template": "Devon Days Out — Resident Explorer",
+  "geofence_radius_meters": 200,
+  "locations": [
+    {
+      "id": "town-totnes",
+      "name": "Totnes",
+      "category": "town_centre",
+      "latitude": 50.4322,
+      "longitude": -3.6872,
+      "relevantText": "Welcome to Totnes! Tap to view your local deals."
+    },
+    {
+      "id": "town-dartmouth",
+      "name": "Dartmouth",
+      "category": "town_centre",
+      "latitude": 50.3522,
+      "longitude": -3.5794,
+      "relevantText": "Welcome to Dartmouth! Your harbour is calling."
+    },
+    {
+      "id": "town-salcombe",
+      "name": "Salcombe",
+      "category": "town_centre",
+      "latitude": 50.2398,
+      "longitude": -3.7711,
+      "relevantText": "Hello Salcombe! 4 partner venues nearby."
+    },
+    {
+      "id": "town-brixham",
+      "name": "Brixham",
+      "category": "town_centre",
+      "latitude": 50.3952,
+      "longitude": -3.5145,
+      "relevantText": "Welcome to Brixham! 20% off at the Fish Market today."
+    },
+    {
+      "id": "town-sidmouth",
+      "name": "Sidmouth",
+      "category": "town_centre",
+      "latitude": 50.6786,
+      "longitude": -3.2399,
+      "relevantText": "Welcome to Sidmouth! Tap for cream tea offers."
+    },
+    {
+      "id": "town-exmouth",
+      "name": "Exmouth",
+      "category": "town_centre",
+      "latitude": 50.6191,
+      "longitude": -3.4147,
+      "relevantText": "Welcome to Exmouth! Tap to view your local deals."
+    },
+    {
+      "id": "venue-brixham-fish-market",
+      "name": "Brixham Fish Market",
+      "category": "partner_venue",
+      "latitude": 50.3950,
+      "longitude": -3.5083,
+      "relevantText": "You're at Brixham Fish Market. 20% off ends 31 May."
+    },
+    {
+      "id": "venue-the-cherub-dartmouth",
+      "name": "The Cherub, Dartmouth",
+      "category": "partner_venue",
+      "latitude": 50.3525,
+      "longitude": -3.5784,
+      "relevantText": "You're at The Cherub, Dartmouth. Show pass for 10% off."
+    }
+  ],
+  "notes": {
+    "apple_wallet_limit": 10,
+    "relevantText_max_chars": 75,
+    "device_radius": "iOS uses ~100m geofence radius by default; Apple controls the precise threshold and battery-aware re-evaluation. The geofence_radius_meters field above is a hint for Google Wallet and PassQR's own renderer.",
+    "battery_impact": "Geofences are evaluated on-device using significant-location-change events; impact on battery is negligible.",
+    "data_privacy": "Coordinates leave the device only when the merchant explicitly scans the pass at a venue. Apple does not transmit geofence enter/exit events to PassQR or Visit South Devon."
+  }
+}
